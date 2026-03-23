@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.11 0.012 240;
+    --foreground: 0.92 0.005 240;
+    --card: 0.14 0.015 240;
+    --card-foreground: 0.92 0.005 240;
+    --popover: 0.14 0.015 240;
+    --popover-foreground: 0.92 0.005 240;
+    --primary: 0.7 0.18 50;
+    --primary-foreground: 0.11 0.012 240;
+    --secondary: 0.17 0.02 240;
+    --secondary-foreground: 0.92 0.005 240;
+    --muted: 0.17 0.02 240;
+    --muted-foreground: 0.68 0.01 240;
+    --accent: 0.62 0.18 240;
+    --accent-foreground: 0.92 0.005 240;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.92 0.005 240;
+    --border: 0.25 0.025 240;
+    --input: 0.25 0.025 240;
+    --ring: 0.7 0.18 50;
+    --radius: 0.5rem;
+    --chart-1: 0.7 0.18 50;
+    --chart-2: 0.62 0.18 240;
+    --chart-3: 0.63 0.22 300;
+    --chart-4: 0.75 0.14 170;
+    --chart-5: 0.8 0.16 80;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Barlow", sans-serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Barlow Condensed", sans-serif;
+  }
+}
+
+@layer utilities {
+  .glow-orange {
+    box-shadow: 0 0 20px oklch(0.7 0.18 50 / 0.4), 0 0 40px
+      oklch(0.7 0.18 50 / 0.15);
+  }
+  .glow-blue {
+    box-shadow: 0 0 20px oklch(0.62 0.18 240 / 0.4), 0 0 40px
+      oklch(0.62 0.18 240 / 0.15);
+  }
+  .glow-purple {
+    box-shadow: 0 0 20px oklch(0.63 0.22 300 / 0.4), 0 0 40px
+      oklch(0.63 0.22 300 / 0.15);
+  }
+  .glow-green {
+    box-shadow: 0 0 20px oklch(0.75 0.14 170 / 0.4), 0 0 40px
+      oklch(0.75 0.14 170 / 0.15);
+  }
+  .border-glow-orange {
+    border-color: oklch(0.7 0.18 50 / 0.6);
+    box-shadow: 0 0 15px oklch(0.7 0.18 50 / 0.2), inset 0 0 15px
+      oklch(0.7 0.18 50 / 0.05);
+  }
+  .border-glow-blue {
+    border-color: oklch(0.62 0.18 240 / 0.6);
+    box-shadow: 0 0 15px oklch(0.62 0.18 240 / 0.2), inset 0 0 15px
+      oklch(0.62 0.18 240 / 0.05);
+  }
+  .border-glow-purple {
+    border-color: oklch(0.63 0.22 300 / 0.6);
+    box-shadow: 0 0 15px oklch(0.63 0.22 300 / 0.2), inset 0 0 15px
+      oklch(0.63 0.22 300 / 0.05);
+  }
+  .border-glow-green {
+    border-color: oklch(0.75 0.14 170 / 0.6);
+    box-shadow: 0 0 15px oklch(0.75 0.14 170 / 0.2), inset 0 0 15px
+      oklch(0.75 0.14 170 / 0.05);
+  }
+  .glass {
+    background: oklch(0.11 0.012 240 / 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .text-orange {
+    color: oklch(0.7 0.18 50);
+  }
+  .text-blue-acc {
+    color: oklch(0.62 0.18 240);
+  }
+  .text-purple-acc {
+    color: oklch(0.63 0.22 300);
+  }
+  .text-green-acc {
+    color: oklch(0.75 0.14 170);
+  }
+  .bg-orange {
+    background-color: oklch(0.7 0.18 50);
+  }
+  .bg-blue-acc {
+    background-color: oklch(0.62 0.18 240);
+  }
+  .bg-purple-acc {
+    background-color: oklch(0.63 0.22 300);
+  }
+  .section-title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .nav-link {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+  }
+}
